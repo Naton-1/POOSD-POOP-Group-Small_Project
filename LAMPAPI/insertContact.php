@@ -34,7 +34,7 @@
         }
         else {
             // return a json stating insertion was a success (no error occurred)
-            returnSuccess();
+            returnSuccess($stmt->insert_id);
         }
     }
 
@@ -59,7 +59,7 @@
     }
 
     // return json stating that the insertion was successful
-    function returnSuccess() {
-        sendResultInfoAsJson('{"status": "success", "message": "Insertion Successful."}');
+    function returnSuccess($id) {
+        sendResultInfoAsJson('{"status": "success", "id": "' . $id . '", "message": "Insertion Successful."}');
     }
 ?>
