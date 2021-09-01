@@ -32,9 +32,10 @@
             // return error json with the error
             returnWithError($stmt->error);
         }
-        
-        // return a json stating insertion was a success (no error occurred)
-        returnSuccess();
+        else {
+            // return a json stating insertion was a success (no error occurred)
+            returnSuccess();
+        }
     }
 
     // close database connection
