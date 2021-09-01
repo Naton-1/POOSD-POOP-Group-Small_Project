@@ -21,7 +21,7 @@ function doLogin()
 //	var tmp = {login:login,password:hash};
 	var jsonPayload = JSON.stringify( tmp );
 	
-	var url = urlBase + '/Login.' + extension;
+	var url = urlBase + '/ExampleLogin.' + extension;
 
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
@@ -116,7 +116,7 @@ function addColor()
 	var tmp = {color:newColor,userId,userId};
 	var jsonPayload = JSON.stringify( tmp );
 
-	var url = urlBase + '/AddColor.' + extension;
+	var url = urlBase + '/ExampleAddColor.' + extension;
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
@@ -149,7 +149,7 @@ function searchColor()
 	var tmp = {search:srch,userId:userId};
 	var jsonPayload = JSON.stringify( tmp );
 
-	var url = urlBase + '/SearchColors.' + extension;
+	var url = urlBase + '/ExampleSearchColors.' + extension;
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
