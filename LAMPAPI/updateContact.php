@@ -31,9 +31,10 @@
                 // return error json with the error
                 returnWithError($stmt->error);
             }
-            
-            // return a json stating update was a success (no error occurred)
-            returnSuccess();
+            else {
+                // return a json stating update was a success (no error occurred)
+                returnSuccess();
+            }
         }
     }
 

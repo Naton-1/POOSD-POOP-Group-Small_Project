@@ -24,10 +24,11 @@
         if ($stmt->errno) {
             // return error json with the error
             returnWithError($stmt->errno);
+        } 
+        else {
+            // return a json stating deletion was a success (no error occurred)
+            returnSuccess();
         }
-        
-        // return a json stating deletion was a success (no error occurred)
-        returnSuccess();
     }
 
     // close database connection
