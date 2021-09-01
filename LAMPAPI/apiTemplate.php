@@ -19,18 +19,18 @@
 
     // get input from front end and decode json
     function getRequestInfo() {
-		return json_decode(file_get_contents('php://input'), true);
-	}
+        return json_decode(file_get_contents('php://input'), true);
+    }
 
     // return object to front end with json type
-	function sendResultInfoAsJson($obj) {
-		header('Content-type: application/json');
-		echo $obj;
-	}
-	
+    function sendResultInfoAsJson($obj) {
+        header('Content-type: application/json');
+        echo $obj;
+    }
+    
     // return an error to the front end with error message
-	function returnWithError($err) {
-		$retValue = '{"status": "error", "message": "' . $err . '"}';
-		sendResultInfoAsJson($retValue);
-	}
+    function returnWithError($err) {
+        $retValue = '{"status": "error", "message": "' . $err . '"}';
+        sendResultInfoAsJson($retValue);
+    }
 ?>
