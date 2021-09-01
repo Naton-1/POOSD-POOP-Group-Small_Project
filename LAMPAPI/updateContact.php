@@ -60,7 +60,7 @@
 
     // return json stating that the insertion was successful
     function returnSuccess() {
-        sendResultInfoAsJson('{"status": success, "message": "Update Successful."}');
+        sendResultInfoAsJson('{"status": "success", "message": "Update Successful."}');
     }
 
     // checks if all input fields exist, return true if any are missing

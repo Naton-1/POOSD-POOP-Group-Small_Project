@@ -53,6 +53,6 @@
 
     // return json stating that the deletion was successful
     function returnSuccess() {
-        sendResultInfoAsJson('{"status": success, "message": "Deletion Successful."}');
+        sendResultInfoAsJson('{"status": "success", "message": "Deletion Successful."}');
     }
 ?>

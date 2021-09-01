@@ -60,6 +60,6 @@
 
     // return json stating that the insertion was successful
     function returnSuccess() {
-        sendResultInfoAsJson('{"status": success, "message": "Insertion Successful."}');
+        sendResultInfoAsJson('{"status": "success", "message": "Insertion Successful."}');
     }
 ?>
