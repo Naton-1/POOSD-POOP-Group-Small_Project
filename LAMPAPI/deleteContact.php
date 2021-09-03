@@ -27,8 +27,10 @@
         } 
         else {
             // return a json stating deletion was a success (no error occurred)
-            returnSuccess();
+            returnSuccess($inData["id"]);
         }
+
+        $stmt->close;
     }
 
     // close database connection
@@ -52,7 +54,7 @@
     }
 
     // return json stating that the deletion was successful
-    function returnSuccess() {
-        sendResultInfoAsJson('{"status": "success", "message": "Deletion Successful."}');
+    function returnSuccess($id) {
+        sendResultInfoAsJson('{"status": "success", "message": "Deletion of ' . $id . ' Successful."}');
     }
 ?>

@@ -36,6 +36,8 @@
             // return a json stating insertion was a success (no error occurred)
             returnSuccess($stmt->insert_id);
         }
+
+        $stmt->close;
     }
 
     // close database connection

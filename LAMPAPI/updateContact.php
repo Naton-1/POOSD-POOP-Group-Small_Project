@@ -36,6 +36,8 @@
                 returnSuccess();
             }
         }
+        
+        $stmt->close;
     }
 
     // close database connection
