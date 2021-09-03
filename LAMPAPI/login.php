@@ -26,7 +26,7 @@
             $stmt->bind_param("ss", $inData["email"], $inData["password"]);
             $stmt->execute();
 
-            returnWithInfo($row['id'], $row['firstname'], $row['lastname']);
+            returnSuccess($inData["id"]);
         }
         else {
             returnWithError("Login failed.");
@@ -55,9 +55,8 @@
         sendResultInfoAsJson($retValue);
     }
 
-    // 
-    function returnWithInfo($id, $firstName, $lastName) {
-		$retValue = '{"id":' . $id . ',"firstName":"' . $firstName . '","lastName":"' . $lastName . '"}';
-		sendResultInfoAsJson($retValue);
-	}
+    // return json stating that the login was successful
+    function returnSuccess($id) {
+        sendResultInfoAsJson('{"status": "success", "id": "' . $id . '", "message": "Login Successful."}');
+    }
 ?>
