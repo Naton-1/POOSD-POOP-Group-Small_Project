@@ -1,25 +1,40 @@
 body 
 {
-    background-color: #707070;
+    background-color: #111111;
+    /*background-image: url('82701028-happy-multiethnic-friends-casual-people-having-fun-sitting-on-couch-indoors-and-laughing.jpg');*/
 }
 
 #title 
 {
-    font-size: 40px;
+    font-size: 60px;
     width: 100%;
     /*margin: 2% 5%;*/
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
-    color: #FFFFFF;
+    color: #6af565;
+}
+
+#banner 
+{
+
+    font-size: 30px;
+    width: 100%;
+    /*margin: 2% 5%;*/
+    margin-top: -3%;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: #6af565;
 }
 
 #loginDiv
 {
     font-size: 30px;
-    width: 70%;
-    margin-left: 15%;
+    height: 100%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 0%;
     padding: 25px 0px 25px 0px;
-    background-color: #b2b2b2;
+    background-color: #272727;
 }
 
 #loggedInDiv
@@ -43,9 +58,10 @@ body
 .buttons
 {
     font-size: 30px;
-    border-radius: 25px;
-    width: 50%;
-    margin-left: 25%;
+    /*border-radius: 25px;*/
+    width: 20%;
+    margin-left: 20%;
+    display:inline-block;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -73,7 +89,7 @@ body
 }
 
 input[type="text"],input[type="password"]{
-    border-radius: 25px;
+    /*border-radius: 25px;*/
     text-align: center;
     width: 80%;
     margin-left: 10%;
@@ -83,13 +99,14 @@ input[type="text"],input[type="password"]{
 
 #inner-title{
     display: inline-block;
-    font-size: 0.8em;
+    font-size: 0.9em;
     width: 90%;
     text-align: center;
+    margin-top: 5%;
     margin-left: 5%;
     margin-bottom: 2%;
     font-family: 'Ubuntu', sans-serif;
-    color: #95060a;
+    color: #FFFFFF;
 }
 
 #loginResult{
