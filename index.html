@@ -1,41 +1,27 @@
 <html>
+
 <head>
 	<title>WikiWho</title>
-    <meta name="description" value="BLARG">
+	<meta name="description" value="The best tool for keeping up with friends">
 	<script type="text/javascript" src="js/md5.js"></script>
 	<script type="text/javascript" src="js/code.js"></script>
-    <link href="css/styles.css" rel="stylesheet">	
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
 </head>
+
 <body>
-<style>
-	body
-	{
-		/*background-image: url('82701028-happy-multiethnic-friends-casual-people-having-fun-sitting-on-couch-indoors-and-laughing.jpg');*/
-	}
-
-</style>
-
-
-
-
-<div id="loginDiv">
-	<center><h1 id="title">WikiWho</h1></center>
-	<h2 id="banner">The best tool for keeping up with friends</h2>
-
-
-	<span id="inner-title">Please enter email and password</span>
-
-	<input type="text" id="loginName" placeholder="Email" /><br />
-	
-	<input type="password" id="loginPassword" placeholder="Password"/><br />
-	<div id="button2">
+	<div id="loginDiv">
+		<img src="images\WikiWho_Logo.svg" alt="WikiWho" style="width: 35%">
+		<h1 id="banner">The best tool for keeping up with friends</h1>
+		<input type="text" id="loginName" placeholder="Email" class="input"/>
+		<span class="underline"></span>
+		<input type="password" id="loginPassword" placeholder="Password" class="input"/>
+		<span class="underline"></span>
 		<button type="button" id="loginButton" class="buttons" onclick="doLogin();"> Sign In </button>
-  		<button type="button" id="registerButton" class="buttons" > Register </button>
+		<a href="/register.html" id="registerLink" > Don't have an account? Register Here!</a>
+
+		<span id="loginResult"></span>
 	</div>
- 
-	<span id="loginResult"></span>
-</div>
 
 </body>
+
 </html>

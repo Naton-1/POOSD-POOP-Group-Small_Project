@@ -10,38 +10,42 @@ body
     width: 100%;
     /*margin: 2% 5%;*/
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Segoe UI', Frutiger-serif;
     color: #6af565;
 }
 
 #banner 
 {
-
-    font-size: 30px;
+    font-size: 27px;
     width: 100%;
     /*margin: 2% 5%;*/
-    margin-top: -3%;
+    margin-top: 2%;
+    margin-bottom: 5%;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Segoe UI', Frutiger-serif;
     color: #6af565;
 }
 
 #loginDiv
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
     font-size: 30px;
-    height: 100%;
     width: 50%;
     margin-left: 25%;
-    margin-top: 0%;
+    margin-top: 10%;
     padding: 25px 0px 25px 0px;
     background-color: #272727;
+    border-radius: 15px;
 }
 
 #loggedInDiv
 {
     font-size: 30px;
     width: 70%;
-    margin-left: 15%;
+    /* margin-left: 15%; */
     padding: 25px;
     background-color: #b2b2b2;
 }
@@ -50,25 +54,30 @@ body
 {
     font-size: 30px;
     width: 70%;
-    margin-left: 15%;
+    /* margin-left: 15%; */
     padding: 25px;
     background-color: #b2b2b2;
 }
 
 .buttons
 {
+    border-color: black;
     font-size: 30px;
     /*border-radius: 25px;*/
     width: 20%;
-    margin-left: 20%;
+    background-color:#FFFFFF;
+    /* margin-left: 20%; */
     display:inline-block;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Segoe UI', Frutiger-serif;
+    border-radius: 15px;
 }
 
 .buttons:hover{
-    background-color: #00d5124f;
-    color: #FFFFFF;
-    opacity: 50%;
+    background-color: #6af565;
+    color: #000000;
+    opacity: 100%;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #loginName
@@ -88,24 +97,38 @@ body
 	font-size: 30px;
 }
 
+#registerLink {
+    margin-top: 2.5%;
+    text-decoration: none;
+    color: #6af565;
+}
+
+#registerLink:hover {
+    text-decoration: underline;
+}
+
 input[type="text"],input[type="password"]{
     /*border-radius: 25px;*/
     text-align: center;
-    width: 80%;
-    margin-left: 10%;
+    background-color: #FFFFFF;
+    /* margin-left: 10%; */
+    width: 50%;
     margin-bottom: 2%;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Segoe UI', Frutiger-serif;
+    border-radius: 12px;
 }
 
 #inner-title{
     display: inline-block;
-    font-size: 0.9em;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: underline;
     width: 90%;
     text-align: center;
-    margin-top: 5%;
-    margin-left: 5%;
+    margin-top: 0%;
+    /* margin-left: 5%; */
     margin-bottom: 2%;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Segoe UI', Frutiger-serif;
     color: #FFFFFF;
 }
 
@@ -114,16 +137,17 @@ input[type="text"],input[type="password"]{
     font-size: 0.8em;
     width: 90%;
     text-align: center;
-    margin-left: 5%;
+    /* margin-left: 5%; */
     margin-bottom: 2%;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Segoe UI', Frutiger-serif;
     color: #95060a;
 }
 
 #userName{
+    
     display: inline-block;
     width: 80%;
-    margin-left: 10%;
+    /* margin-left: 10%; */
     text-align: center;
 }
 
@@ -137,7 +161,7 @@ select{
     margin-left: 35%;
     margin-top: 2%;
     font-size: 0.75em;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Segoe UI', Frutiger-serif;
 }
 
 #colorSearchResult{
@@ -152,6 +176,6 @@ select{
     margin-left: 5%;
     margin-top: 2%;
     margin-bottom: 1%;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Segoe UI', Frutiger-serif;
     color: #95060a;
 }
