@@ -23,7 +23,7 @@
         // Check if the login is valid
         if ($row = $result->fetch_assoc()) {
             $stmt = $conn->prepare("UPDATE Users SET datelastloggedin = CURRENT_TIMESTAMP() WHERE email=? AND password=?");
-            $stmt->bind_param("ss", $inData["loginName"], $inData["loginPassword"]);
+            $stmt->bind_param("ss", $inData["email"], $inData["password"]);
             $stmt->execute();
 
             returnWithInfo($row['id'], $row['firstname'], $row['lastname']);
