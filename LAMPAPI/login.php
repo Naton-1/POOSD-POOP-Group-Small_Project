@@ -15,7 +15,7 @@
 
         // Prepare SQL statement and bind parameters
         $stmt = $conn->prepare("SELECT id, firstname, lastname FROM Users WHERE email=? AND password=?");
-        $stmt->bind_param("ss", $inData["loginName"], $inData["loginPassword"]);
+        $stmt->bind_param("ss", $inData["email"], $inData["password"]);
         $stmt->execute();
 
         $result = $stmt->get_result();
