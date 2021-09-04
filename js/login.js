@@ -39,7 +39,7 @@ function doLogin() {
                 var jsonObject = JSON.parse(xhr.responseText);
                 userId = jsonObject.id;
 
-                if (userId < 1) {
+                if (jsonObject.error) {
                     document.getElementById("loginResult").innerHTML = jsonObject.error;
                     return;
                 }
