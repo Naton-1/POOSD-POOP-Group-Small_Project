@@ -61,8 +61,12 @@ function doLogin() {
 function checkLogin(email, password) {
     if (email == undefined || email == "" || password == undefined || password == "") {
         document.getElementById("loginResult").innerHTML = "Missing a field. Please try again.";
-        document.getElementById("loginName").classList.add('error');
-        document.getElementById("loginPassword").classList.add('error');
+        if (email == undefined || email == "") {
+            document.getElementById("loginName").classList.add('error');
+        }
+        if (password == undefined || password == "") {
+            document.getElementById("loginPassword").classList.add('error');
+        }
 
         return 1;
     }
