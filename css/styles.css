@@ -80,6 +80,13 @@ body
     cursor: pointer;
 }
 
+.error {
+    border-color: red;
+    position: relative;
+    animation: shake .1s linear;
+    animation-iteration-count: 3;
+}
+
 #loginName
 {
 	font-size: 30px;
@@ -141,7 +148,7 @@ input[type="text"],input[type="password"]{
     /* margin-left: 5%; */
     margin-bottom: 2%;
     font-family: 'Segoe UI', Frutiger-serif;
-    color: #95060a;
+    color: #ff0008;
 }
 
 #userName{
