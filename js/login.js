@@ -6,6 +6,9 @@ var firstName = "";
 var lastName = "";
 
 function doLogin() {
+    // reset errors
+    document.getElementById("loginName").classList.remove('error');
+    document.getElementById("loginPassword").classList.remove('error');
 
     // get text entries
     var email = document.getElementById("loginName").value;
