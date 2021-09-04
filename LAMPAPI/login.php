@@ -51,13 +51,13 @@
     
     // return an error to the front end with error message
     function returnWithError($err) {
-        $retValue = '{"status": "error", "message": "' . $err . '"}';
-        sendResultInfoAsJson($retValue);
+        $retValue = '{"id":0, "firstName":"", "lastName":"", "error":"' . $err . '"}';
+        sendResultInfoAsJson( $retValue );
     }
 
     // 
     function returnWithInfo($id, $firstName, $lastName) {
-		$retValue = '{"id":' . $id . ',"firstName":"' . $firstName . '","lastName":"' . $lastName . '"}';
-		sendResultInfoAsJson($retValue);
-	}
+        $retValue = '{"id":' . $id . ',"firstName":"' . $firstName . '","lastName":"' . $lastName . '", "error":""}';
+        sendResultInfoAsJson($retValue);
+    }
 ?>
