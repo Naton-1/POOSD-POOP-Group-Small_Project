@@ -37,6 +37,7 @@
 
     // close database connection
     $conn->close();
+    returnWithError("Internal Server Error.");
 
     // get input from front end and decode json
     function getRequestInfo() {
