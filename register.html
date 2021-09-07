@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>WikiWho</title>
+		<meta name="description" value="The best tool for keeping up with friends">
+		<script src="js/cookie.js"></script>
+		<script src="js/md5.js"></script>
+		<!--<script src="js/login.js"></script> -->
+		<link href="css/register.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="registerDiv">
+			<img src="images\WikiWho_Logo.svg" alt="WikiWho" style="width: 35%">
+			<hr />
+			<h1 id="banner">Register</h1>
+			<input type="text" id="registerFirstName" placeholder="First Name" class="input"/>
+			<input type="text" id="registerLastName" placeholder="Last Name" class="input"/>
+			<input type="email" id="registerEmail" placeholder="Email" class="input"/>
+			<input type="tel" id="registerNumber" placeholder="Phone Number" class="input"/>
+			<input type="password" id="registerPassword" placeholder="Password" class="input"/>
+			<button type="button" id="registerButton" class="buttons" onclick="doRegister();"> Sign Up </button>
+			<a href="/index.html" id="loginLink" > Have an account? Log in here!</a>
+		</div>
+	</body>
+</html>
