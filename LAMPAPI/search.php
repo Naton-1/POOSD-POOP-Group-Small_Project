@@ -19,7 +19,7 @@
          // Prepare SQL statement and bind parameters
          $stmt = $conn->prepare("SELECT * FROM Contacts WHERE userid=? AND (firstname LIKE ? OR lastname LIKE ?) ORDER BY firstname, lastname");
          $stmt->bind_param("sss", $userId, $search, $search);
-         $stmt->execute;
+         $stmt->execute();
 
          $result = $stmt->get_result();
 
@@ -30,7 +30,7 @@
                 $searchRes .= ",";
             }
             $searchCount++;
-            $searchRes .= '{"id": "' . $row["id"] . '", "firstname": "' . $row["firstname"] . '", "lastname": "' . $row["lastname"] . '", "phone": "' . $row["phone"] . '", "email": "' . $row["email"] . '"}';
+            $searchRes .= '{"id": "' . $row["id"] . '", "firstname": "' . $row["firstname"] . '", "lastname": "' . $row["lastname"] . '", "phonenumber": "' . $row["phonenumber"] . '", "email": "' . $row["email"] . '"}';
         }
 
         if ($searchCount == 0) {
