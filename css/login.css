@@ -1,7 +1,6 @@
 body 
 {
     background-color: #111111;
-    /*background-image: url('82701028-happy-multiethnic-friends-casual-people-having-fun-sitting-on-couch-indoors-and-laughing.jpg');*/
 }
 
 #title 
@@ -14,13 +13,22 @@ body
     color: #6af565;
 }
 
+hr {
+    align-self: center;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    color:#6af565;
+    border-color: #6af565;
+    width: 30%;
+}
+
 #banner 
 {
     font-size: 27px;
     width: 100%;
     /*margin: 2% 5%;*/
-    margin-top: 2%;
-    margin-bottom: 5%;
+    margin-top: 0%;
+    margin-bottom: 1%;
     text-align: center;
     font-family: 'Segoe UI', Frutiger-serif;
     color: #6af565;
@@ -41,30 +49,12 @@ body
     border-radius: 15px;
 }
 
-#loggedInDiv
-{
-    font-size: 30px;
-    width: 70%;
-    /* margin-left: 15%; */
-    padding: 25px;
-    background-color: #b2b2b2;
-}
-
-#accessUIDiv
-{
-    font-size: 30px;
-    width: 70%;
-    /* margin-left: 15%; */
-    padding: 25px;
-    background-color: #b2b2b2;
-}
-
 .buttons
 {
     border-color: black;
-    font-size: 30px;
+    font-size: 24px;
     /*border-radius: 25px;*/
-    width: 20%;
+    width: 15%;
     background-color:#FFFFFF;
     /* margin-left: 20%; */
     display:inline-block;
@@ -87,21 +77,8 @@ body
     animation-iteration-count: 3;
 }
 
-#loginName
-{
-	font-size: 30px;
-}
-#loginPassword
-{
-	font-size: 30px;
-}
-#searchText
-{
-	font-size: 30px;
-}
-#colorText
-{
-	font-size: 30px;
+.input {
+    font-size: 24px;
 }
 
 #registerLink {
@@ -126,64 +103,14 @@ input[type="text"],input[type="password"]{
     border-radius: 12px;
 }
 
-#inner-title{
-    display: inline-block;
-    font-size: 1.1em;
-    font-weight: bold;
-    text-decoration: underline;
-    width: 90%;
-    text-align: center;
-    margin-top: 0%;
-    /* margin-left: 5%; */
-    margin-bottom: 2%;
-    font-family: 'Segoe UI', Frutiger-serif;
-    color: #FFFFFF;
-}
-
 #loginResult{
     display: inline-block;
     font-size: 0.8em;
+    font-weight: bold;
     width: 90%;
     text-align: center;
     /* margin-left: 5%; */
-    margin-bottom: 2%;
-    font-family: 'Segoe UI', Frutiger-serif;
-    color: #ff0008;
-}
-
-#userName{
-    
-    display: inline-block;
-    width: 80%;
-    /* margin-left: 10%; */
-    text-align: center;
-}
-
-#logoutButton{
-    width: 20%;
-    margin-left: 40%;
-}
-
-select{
-    width: 30%;
-    margin-left: 35%;
-    margin-top: 2%;
-    font-size: 0.75em;
-    font-family: 'Segoe UI', Frutiger-serif;
-}
-
-#colorSearchResult{
-    display: none;
-}
-
-#colorAddResult{
-    display: inline-block;
-    font-size: 0.8em;
-    width: 90%;
-    text-align: center;
-    margin-left: 5%;
-    margin-top: 2%;
     margin-bottom: 1%;
     font-family: 'Segoe UI', Frutiger-serif;
-    color: #95060a;
+    color: #ff0008;
 }
