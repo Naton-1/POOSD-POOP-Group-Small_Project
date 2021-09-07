@@ -1,10 +1,6 @@
 var urlBase = 'http://group1-cop4331.ddns.net/LAMPAPI';
 var extension = 'php';
 
-var userId = 0;
-var firstName = "";
-var lastName = "";
-
 function doLogin() {
     // reset errors
     document.getElementById("loginName").classList.remove('error');

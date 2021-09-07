@@ -1,3 +1,6 @@
+var userId = 0;
+var firstName = "";
+var lastName = "";
 
 function saveCookie() {
     var minutes = 20;
@@ -34,3 +37,13 @@ function readCookie() {
         window.location.href = "index.html"
     }
 }
+
+function doLogout() {
+    userId = 0;
+    firstName = "";
+    lastName = "";
+    document.cookie = "firstName= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+    window.location.href = "index.html";
+}
+
+readCookie();
