@@ -77,7 +77,7 @@ hr {
     cursor: pointer;
 }
 
-input[type="text"],input[type="password"],input[type="email"],input[type="tel"] {
+input[type="text"],input[type="password"],input[type="email"] {
     /*border-radius: 25px;*/
     text-align: center;
     background-color: #FFFFFF;
