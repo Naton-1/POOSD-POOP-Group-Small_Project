@@ -91,3 +91,22 @@ input[type="text"],input[type="password"],input[type="email"] {
 .input {
     font-size: 24px;
 }
+
+.error {
+    border-color: red;
+    position: relative;
+    animation: shake .1s linear;
+    animation-iteration-count: 3;
+}
+
+#registerResult{
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: bold;
+    width: 90%;
+    text-align: center;
+    /* margin-left: 5%; */
+    margin-bottom: 1%;
+    font-family: 'Segoe UI', Frutiger-serif;
+    color: #ff0008;
+}
