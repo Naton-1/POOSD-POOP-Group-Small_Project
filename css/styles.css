@@ -1,14 +1,13 @@
 body 
 {
     background-color: #111111;
-    /*background-image: url('82701028-happy-multiethnic-friends-casual-people-having-fun-sitting-on-couch-indoors-and-laughing.jpg');*/
+    
 }
 
 #title 
 {
     font-size: 60px;
     width: 100%;
-    /*margin: 2% 5%;*/
     text-align: center;
     font-family: 'Segoe UI', Frutiger-serif;
     color: #6af565;
@@ -18,7 +17,6 @@ body
 {
     font-size: 27px;
     width: 100%;
-    /*margin: 2% 5%;*/
     margin-top: 2%;
     margin-bottom: 5%;
     text-align: center;
@@ -72,7 +70,8 @@ body
     border-radius: 15px;
 }
 
-.buttons:hover{
+.buttons:hover
+{
     background-color: #6af565;
     color: #000000;
     opacity: 100%;
@@ -80,7 +79,8 @@ body
     cursor: pointer;
 }
 
-.error {
+.error 
+{
     border-color: red;
     position: relative;
     animation: shake .1s linear;
@@ -104,29 +104,31 @@ body
 	font-size: 30px;
 }
 
-#registerLink {
+#registerLink 
+{
     font-family: 'Segoe UI', Frutiger-serif;
     margin-top: 2.5%;
     text-decoration: none;
     color: #6af565;
 }
 
-#registerLink:hover {
+#registerLink:hover 
+{
     text-decoration: underline;
 }
 
-input[type="text"],input[type="password"]{
-    /*border-radius: 25px;*/
+input[type="text"],input[type="password"]
+{
     text-align: center;
     background-color: #FFFFFF;
-    /* margin-left: 10%; */
     width: 50%;
     margin-bottom: 2%;
     font-family: 'Segoe UI', Frutiger-serif;
     border-radius: 12px;
 }
 
-#inner-title{
+#inner-title
+{
     display: inline-block;
     font-size: 1.1em;
     font-weight: bold;
@@ -134,37 +136,37 @@ input[type="text"],input[type="password"]{
     width: 90%;
     text-align: center;
     margin-top: 0%;
-    /* margin-left: 5%; */
     margin-bottom: 2%;
     font-family: 'Segoe UI', Frutiger-serif;
     color: #FFFFFF;
 }
 
-#loginResult{
+#loginResult
+{
     display: inline-block;
     font-size: 0.8em;
     width: 90%;
     text-align: center;
-    /* margin-left: 5%; */
     margin-bottom: 2%;
     font-family: 'Segoe UI', Frutiger-serif;
     color: #ff0008;
 }
 
-#userName{
-    
+#userName
+{
     display: inline-block;
     width: 80%;
-    /* margin-left: 10%; */
     text-align: center;
 }
 
-#logoutButton{
+#logoutButton
+{
     width: 20%;
     margin-left: 40%;
 }
 
-select{
+select
+{
     width: 30%;
     margin-left: 35%;
     margin-top: 2%;
@@ -176,7 +178,8 @@ select{
     display: none;
 }
 
-#colorAddResult{
+#colorAddResult
+{
     display: inline-block;
     font-size: 0.8em;
     width: 90%;

@@ -1,8 +1,45 @@
 <html>
-    <haed>
-        <title>Contacts page</title>
-    </haed>
+    
+    <head>
+        <title>WikiWho Contacts</title>
+        <link href="css/contact_style.css" rel="stylesheet">
+    </head>
+
+    <div id="topDiv" >
+        <div id = "logo">
+            <img src="images\WikiWho_Logo.svg" alt="WikiWho" style="width: 60%" >
+        </div>
+        <div id = "logout">
+            <a href="" id="logout" title = "Log Out" > <b>Log Out</b></a>
+        </div>
+    </div>
+
     <body>
-        <h1>under constuction</h1>
+        <div id="contactDiv">
+            <h1 id="banner">Contacts</h1>
+            <input type="text" id="searchBar" placeholder="Search" class="input"/>
+            <div id = 'headerDiv'>
+                <h2 id = "name" style = "width: 20%">Contact Name</h2>
+                <h3 id = "email" style = "width: 40%">Email</h3>
+                <h4 id = "phone" style = "width: 20%">Phone #</h4>
+                <h4 id = "phone" style = "width: 10%"></h4>
+                <h4 id = "phone" style = "width: 10%"></h4>
+                <button type="button" id="plus-button" class="plus-button" onclick="" title = "Add Contact"> + </button>
+            </div>
+            
+            <table id="table">
+                <tr>
+                    <td style = "width: 20%">Charles Moore </td>
+                    <td style = "width: 40%">Charleymoore2016@gmail.com</td>
+                    <td style = "width: 20%">3866248734</td>
+                    <td style = "width: 10%"><button type="button" id="button" class="button" onclick="" title = "Edit Contact"> Edit </button></td>
+                    <td style = "width: 10%"><button type="button" id="button" class="button" onclick="" title = "Remove Contact"> Remove </button></td>
+                </tr>
+                <tr>
+                  
+                </tr>
+              </table> 
+        
+        </div>
     </body>
 </html>

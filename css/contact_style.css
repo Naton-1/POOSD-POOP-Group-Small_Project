@@ -1,0 +1,210 @@
+body 
+{
+    background-color: #111111;
+}
+
+#topDiv /*header div at top of page*/
+{
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    margin-left: 0%;
+    margin-top: -1%;
+    width: 100%;
+    height: 4%;
+    padding: 25px 0px 25px 0px;
+    border-bottom: 2px solid #6af565;
+    background-color: #1a1a1a;
+}
+
+#logo
+{
+    margin-left: -89%;
+    position: absolute;
+}
+
+#logout
+{
+    font-size: 24px;
+    text-decoration: none;
+    margin-left: 73%;
+    width: 30%;
+    position: absolute;
+    display: inline-block;
+    flex-direction: row;
+    color: #6af565
+}
+
+#logout:hover
+{
+    text-decoration: none;
+    cursor: pointer;
+    border-color: transparent;
+}
+
+#contactDiv /*center box div*/
+{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    width: 50%;
+    height: 40%;
+    margin-left: 25%;
+    margin-top: 5%;
+    padding: 25px 0px 25px 0px;
+    border-radius: 15px;
+    background-color: #272727;
+}
+
+#banner /* the contact in the top left next to search bar */
+{
+    font-size: 27px;
+    font-family: 'Segoe UI', Frutiger-serif;
+    text-align: left;
+    margin-top: -17%;
+    margin-left: 55%;
+    width: 100%;
+    position:absolute;
+    color: #e2e2e2;
+}
+
+#searchBar
+{
+	font-size: 30px;
+}
+
+input[type="text"]
+{
+    font-family: 'Segoe UI', Frutiger-serif;
+    text-align: center;
+    position: relative;
+    margin-left: 0%; 
+    margin-top: -25%;
+    width: 50%;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+}
+
+#headerDiv /* Header div has name, email, phone, and "+" button */
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    margin-top: 2%;
+    font-size: 30px;
+    width: 100%;
+    height: 0%;
+    padding: 25px 0px 25px 0px;
+    background-color: #1a1a1a;
+    position:relative;
+}
+
+#name
+{
+    
+    font-size: 20px;
+    font-family: 'Segoe UI', Frutiger-serif;
+    position:relative;
+    color: #6af565;
+}
+
+#email
+{
+    font-size: 20px;
+    font-family: 'Segoe UI', Frutiger-serif;
+    position:relative;
+    color: #6af565;
+}
+
+#phone
+{
+    font-size: 20px;
+    font-family: 'Segoe UI', Frutiger-serif;
+    position:relative;
+    color: #6af565;
+}
+
+.plus-button 
+{
+	font-size: 30px;
+	position: absolute;
+	margin-left: 90%;
+	border-color: transparent;
+    color: #6af565;
+    background-color: #1a1a1a;
+}
+
+.plus-button:hover
+{
+    text-decoration: none;
+    cursor: pointer;
+    border-color: transparent;
+    background-color: #6af565;
+}
+
+table
+{
+    font-size: 20px;
+    font-family: 'Segoe UI', Frutiger-serif;
+    align-self: center;
+    position: relative;
+    border-spacing: 0px;
+    width: 100%;
+    color: #6af565;
+    background-color: #494949;
+}
+
+td
+{
+    font-size: 20px;
+    font-family: 'Segoe UI', Frutiger-serif;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    border-bottom:2px solid #6af565;
+    width: 100%;
+    color: #e2e2e2;
+    background-color: #494949;
+}
+
+
+.button
+{
+    border-color: black;
+    font-size: 15px;
+    color: #6af565;
+    background-color:#1a1a1a;
+    position: relative;
+    width: 80%;
+    display:inline-block;
+    font-family: 'Segoe UI', Frutiger-serif;
+    border-radius: 15px;
+    border-color: transparent;
+}
+
+.button:hover
+{
+    background-color: #6af565;
+    color: #000000;
+    opacity: 100%;
+    text-decoration: none;
+    cursor: pointer;
+    border-color: transparent;
+}
+
+.error 
+{
+    position: relative;
+    animation: shake .1s linear;
+    animation-iteration-count: 3;
+    border-color: red;
+}
+
