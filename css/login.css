@@ -42,11 +42,22 @@ hr {
     align-items: center;
     font-size: 30px;
     width: 50%;
-    margin-left: 25%;
-    margin-top: 10%;
     padding: 25px 0px 25px 0px;
     background-color: #272727;
     border-radius: 15px;
+}
+
+.containter {
+    position: relative;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .buttons

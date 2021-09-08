@@ -31,6 +31,19 @@ hr {
     text-decoration: underline;
 }
 
+.containter {
+    position: relative;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 #registerDiv {
     display: flex;
     flex-direction: column;
@@ -38,12 +51,10 @@ hr {
     align-items: center;
     font-size: 30px;
     width: 50%;
-    margin: auto;
     background-color: #272727;
     border-radius: 15px;
-    margin-top: 4rem;
     padding-top: 20px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
 }
 
 .buttons {
