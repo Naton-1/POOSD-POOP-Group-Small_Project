@@ -28,7 +28,7 @@ function readCookie() {
     }
 
     // if user is present (userid > 0) and theyre on the login or register page, then redirect to contacts page
-    if ((window.location.href.includes("index") || window.location.href.includes("register")) && userID > 0) {
+    if ((window.location.href.includes("index") || window.location.href.includes("register")) && userId > 0) {
         window.location.href = "contacts.html";
     }
 
