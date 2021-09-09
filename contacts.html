@@ -62,15 +62,57 @@
                 </tbody>
               </table> 
         </div>
-        <div id="add-modal" class="modal-container">
+        <div id="add-modal" class="modal-container" >
             <div class="modal-content">
-                <h1>Add Contact</h1>
-                <button type="button" id="clos  e-add-modal"><i class="fas fa-times"></i></button>
+                <button type="button" class="close-button" onclick=""><i class="fas fa-times"></i></button>
+                <div class="modal-header">
+                    <h1 class="modal-text">Add Contact</h1>
+                </div>
+                <div id="add-modal-fields">
+                    <hr />
+                    <span id="addContactResult" class="error"></span>
+                    <input type="text" id="addFirstName" placeholder="First Name" class="modal-input"/>
+                    <input type="text" id="addLastName" placeholder="Last Name" class="modal-input"/>
+                    <input type="email" id="addEmail" placeholder="Email" class="modal-input"/>
+                    <input type="tel" id="addPhone" placeholder="Phone" class="modal-input"/>
+                </div>
+                <div id="add-modal-button">
+                    <button type="button" class="modal-button" onclick="">Add</button>
+                </div>
             </div>
         </div>
         <div id="delete-modal" class="modal-container">
             <div class="modal-content"> 
-                <p>Modal content, pls work</p>
+                <button type="button" class="close-button" onclick=""><i class="fas fa-times"></i></button>
+                <div class="modal-header">
+                    <h1 class="modal-text">Delete this Contact?</h1>
+                </div>
+                <hr />
+                <span id="deleteContactInfo">Contact Info</span>
+                <div class="modal-button-container">
+                    <button type="button" class="modal-button" onclick="">Delete</button>
+                    <button type="button" class="modal-button" onclick="">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div id="edit-modal" class="modal-container">
+            <div class="modal-content">
+                <button type="button" class="close-button" onclick=""><i class="fas fa-times"></i></button>
+                <div class="modal-header">
+                    <h1 class="modal-text">Edit Contact</h1>
+                </div>
+                <div class="edit-modal-fields">
+                    <hr />
+                    <span id="editContactResult" class="error"></span>
+                    <input type="text" id="editFirstName" placeholder="First Name" class="modal-input"/>
+                    <input type="text" id="editLastName" placeholder="Last Name" class="modal-input"/>
+                    <input type="email" id="editEmail" placeholder="Email" class="modal-input"/>
+                    <input type="tel" id="editPhone" placeholder="Phone" class="modal-input"/>
+                </div>
+                <div class="modal-button-container">
+                    <button type="button" class="modal-button" onclick="">Save</button>
+                    <button type="button" class="modal-button" onclick="">Cancel</button>
+                </div>
             </div>
         </div>
     </body>
