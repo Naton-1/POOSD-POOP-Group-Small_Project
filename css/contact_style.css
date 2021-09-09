@@ -1,17 +1,15 @@
-body 
-{
+body  {
     background-color: #111111;
+    margin: 0px;
+    font-family: 'Segoe UI', Frutiger-serif;
 }
 
-#topDiv /*header div at top of page*/
-{
+.nav {
     font-size: 30px;
     display: flex;
     flex-direction: row;
-    justify-content: center; 
+    justify-content: space-between; 
     align-items: center;
-    margin-left: 0%;
-    margin-top: -1%;
     width: 100%;
     height: 4%;
     padding: 25px 0px 25px 0px;
@@ -19,192 +17,180 @@ body
     background-color: #1a1a1a;
 }
 
-#logo
-{
-    margin-left: -89%;
-    position: absolute;
-}
-
-#logout
-{
-    font-size: 24px;
-    text-decoration: none;
-    margin-left: 73%;
-    width: 30%;
-    position: absolute;
-    display: inline-block;
-    flex-direction: row;
-    color: #6af565
-}
-
-#logout:hover
-{
-    text-decoration: none;
-    cursor: pointer;
-    border-color: transparent;
-}
-
-#contactDiv /*center box div*/
-{
+#contactDiv /*center box div*/ {
     font-size: 30px;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center; 
-    align-items: center;
-    width: 50%;
-    height: 40%;
-    margin-left: 25%;
+    align-items: center; */
+    width: 70%;
+    /* height: 40%; */
+    margin-left: 15%;
     margin-top: 5%;
-    padding: 25px 0px 25px 0px;
+    padding: 25px 0px;
     border-radius: 15px;
     background-color: #272727;
 }
 
-#banner /* the contact in the top left next to search bar */
-{
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 98%;
+    height: 4.5%;
+    margin-left: 1%;
+    margin-bottom: 2.5%;
+}
+
+.banner {
     font-size: 27px;
-    font-family: 'Segoe UI', Frutiger-serif;
     text-align: left;
-    margin-top: -17%;
-    margin-left: 55%;
-    width: 100%;
-    position:absolute;
     color: #e2e2e2;
 }
 
-#searchBar
-{
-	font-size: 30px;
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 60%;
+    float: right;
 }
 
-input[type="text"]
-{
-    font-family: 'Segoe UI', Frutiger-serif;
+#searchBar {
+	font-size: 24px;
+}
+
+#searchButton {
+    width: 10%;
+}
+
+input {
     text-align: center;
-    position: relative;
+    font-family: 'Segoe UI', Frutiger-serif;
+}
+
+input[type="text"] {
+    /* position: relative;
     margin-left: 0%; 
     margin-top: -25%;
-    width: 50%;
+    width: 50%; */
+    width: 60%;
     border-radius: 12px;
     background-color: #FFFFFF;
 }
 
-#headerDiv /* Header div has name, email, phone, and "+" button */
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center; 
-    align-items: center;
-    text-align: center;
-    margin-top: 2%;
-    font-size: 30px;
-    width: 100%;
-    height: 0%;
-    padding: 25px 0px 25px 0px;
-    background-color: #1a1a1a;
-    position:relative;
-}
-
-#name
-{
-    
-    font-size: 20px;
-    font-family: 'Segoe UI', Frutiger-serif;
-    position:relative;
-    color: #6af565;
-}
-
-#email
-{
-    font-size: 20px;
-    font-family: 'Segoe UI', Frutiger-serif;
-    position:relative;
-    color: #6af565;
-}
-
-#phone
-{
-    font-size: 20px;
-    font-family: 'Segoe UI', Frutiger-serif;
-    position:relative;
-    color: #6af565;
-}
-
-.plus-button 
-{
-	font-size: 30px;
-	position: absolute;
-	margin-left: 90%;
+.add-button {
+    width: 5%;
+	font-size: 15px;
+	/* position: absolute;
+	margin-left: 90%; */
 	border-color: transparent;
     color: #6af565;
     background-color: #1a1a1a;
+    border-radius: 12px;
 }
 
-.plus-button:hover
-{
+.add-button:hover {
+    color:#000000;
     text-decoration: none;
     cursor: pointer;
     border-color: transparent;
     background-color: #6af565;
 }
 
-table
-{
+#logout {
+    width: 5em;
+}
+
+table {
     font-size: 20px;
-    font-family: 'Segoe UI', Frutiger-serif;
     align-self: center;
     position: relative;
     border-spacing: 0px;
-    width: 100%;
+    width: 98%;
+    margin-left: 1%;
     color: #6af565;
     background-color: #494949;
 }
 
-td
-{
+thead th {
+    border-bottom: 3px solid #6af565;
+}
+
+thead {
+    font-size: 24px;
+    height: 3.5em;
+    background-color: #1a1a1a;
+    pointer-events: none;
+}
+
+td {
     font-size: 20px;
-    font-family: 'Segoe UI', Frutiger-serif;
-    align-items: center;
     text-align: center;
-    position: relative;
     padding-left: 15px;
     padding-bottom: 5px;
-    border-bottom:2px solid #6af565;
-    width: 100%;
+    border-bottom: 1px solid #6af565;
     color: #e2e2e2;
-    background-color: #494949;
 }
 
+tr {
+    height: 3em;
+}
 
-.button
-{
-    border-color: black;
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: #2d6a4f;
+}
+
+.button {
     font-size: 15px;
-    color: #6af565;
-    background-color:#1a1a1a;
+    color: #000000;
+    background-color:#6af565;
     position: relative;
     width: 80%;
-    display:inline-block;
-    font-family: 'Segoe UI', Frutiger-serif;
+    display: inline-block;
     border-radius: 15px;
     border-color: transparent;
+    padding: 5px 0px;
 }
 
-.button:hover
-{
-    background-color: #6af565;
-    color: #000000;
+.button:hover {
+    background-color: #000000;
+    color: #6af565;
     opacity: 100%;
     text-decoration: none;
     cursor: pointer;
     border-color: transparent;
 }
 
-.error 
-{
+.error  {
     position: relative;
     animation: shake .1s linear;
     animation-iteration-count: 3;
     border-color: red;
 }
 
+.modal-container {
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, .5);
+    /* add transparent background */
+}
+
+.modal-content {
+    opacity: 1 !important;
+    width: 20%;
+    height: 20%;
+    background-color: white;
+    border-radius: 15px;
+}
