@@ -28,10 +28,14 @@ function doSearch() {
                     return;
                 }
 
+                // clear current table
+                document.querySelector("#table tbody").innerHTML = "";
+                searchBar.value = "";
+
                 // put data in HTML
                 var arr = jsonObject.results;
                 arr.forEach(element => {
-                    addContactToTable(element.firstname, element.lastname, element.phonenumber, element.email);
+                    addContactToTable(element.firstname, element.lastname, element.phonenumber, element.email, element.id);
                 });
             }
         };
@@ -272,6 +276,18 @@ function showAddModal() {
     var modal = document.getElementById("add-modal");
     modal.style.display = "flex";
 
+    // on show, make sure empty form
+    document.getElementById("addContactResult").innerHTML = "";
+    document.getElementById("addFirstName").value = "";
+    document.getElementById("addFirstName").classList.remove("error");
+    document.getElementById("addLastName").value = "";
+    document.getElementById("addLastName").classList.remove("error");
+    document.getElementById("addEmail").value = "";
+    document.getElementById("addEmail").classList.remove("error");
+    document.getElementById("addPhone").value = "";
+    document.getElementById("addPhone").classList.remove("error");
+
+
     document.getElementById("addModalButton").onclick = function () {
         addContact();
     }
@@ -281,6 +297,13 @@ function showAddModal() {
 function showEditModal(contactId) {
     var modal = document.getElementById("edit-modal");
     modal.style.display = "flex";
+
+    // make sure no errors on show
+    document.getElementById("editContactResult").innerHTML = "";
+    document.getElementById("editFirstName").classList.remove("error");
+    document.getElementById("editLastName").classList.remove("error");
+    document.getElementById("editEmail").classList.remove("error");
+    document.getElementById("editPhone").classList.remove("error");
 
     // populate modal fields
     var name = document.querySelector(`#contact${contactId} :nth-child(1)`).innerHTML.split(" ");
@@ -298,6 +321,9 @@ function showEditModal(contactId) {
 function showDeleteModal(contactId) {
     var modal = document.getElementById("delete-modal");
     modal.style.display = "flex";
+
+    // hide error
+    document.getElementById("addContactResult").innerHTML = "";
 
     var contactInfo = document.querySelector(`#contact${contactId} :nth-child(1)`);
     document.getElementById("deleteContactInfo").innerHTML = contactInfo.innerHTML;
