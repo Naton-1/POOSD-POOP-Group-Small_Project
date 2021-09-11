@@ -1,13 +1,10 @@
-body 
-{
+body {
     background-color: #111111;
 }
 
-#title 
-{
+#title {
     font-size: 60px;
     width: 100%;
-    /*margin: 2% 5%;*/
     text-align: center;
     font-family: 'Segoe UI', Frutiger-serif;
     color: #6af565;
@@ -22,11 +19,9 @@ hr {
     width: 30%;
 }
 
-#banner 
-{
+#banner {
     font-size: 27px;
     width: 100%;
-    /*margin: 2% 5%;*/
     margin-top: 0%;
     margin-bottom: 1%;
     text-align: center;
@@ -34,8 +29,7 @@ hr {
     color: #6af565;
 }
 
-#loginDiv
-{
+#loginDiv {
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -60,8 +54,7 @@ hr {
     transform: translate(-50%, -50%);
 }
 
-.buttons
-{
+.buttons {
     border-color: black;
     font-size: 24px;
     /*border-radius: 25px;*/
@@ -73,7 +66,7 @@ hr {
     border-radius: 15px;
 }
 
-.buttons:hover{
+.buttons:hover {
     background-color: #6af565;
     color: #000000;
     opacity: 100%;
@@ -103,24 +96,21 @@ hr {
     text-decoration: underline;
 }
 
-input[type="text"],input[type="password"]{
-    /*border-radius: 25px;*/
+input[type="text"],input[type="password"] {
     text-align: center;
     background-color: #FFFFFF;
-    /* margin-left: 10%; */
     width: 50%;
     margin-bottom: 2%;
     font-family: 'Segoe UI', Frutiger-serif;
     border-radius: 12px;
 }
 
-#loginResult{
+#loginResult {
     display: inline-block;
     font-size: 0.8em;
     font-weight: bold;
     width: 90%;
     text-align: center;
-    /* margin-left: 5%; */
     margin-bottom: 1%;
     font-family: 'Segoe UI', Frutiger-serif;
     color: #ff0008;

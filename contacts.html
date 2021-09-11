@@ -1,8 +1,119 @@
 <html>
-    <haed>
-        <title>Contacts page</title>
-    </haed>
+    
+    <head>
+        <title>WikiWho Contacts</title>
+        <meta name="description" value="The best tool for keeping up with friends">
+	    <script src="js/cookie.js"></script>
+        <script src="js/contacts.js"></script>
+        <link href="css/contact_style.css" rel="stylesheet">
+        <!-- font awsome icons -->
+        <script src="https://kit.fontawesome.com/edcdcee58e.js" crossorigin="anonymous"></script>
+    </head>
+    
     <body>
-        <h1>under constuction</h1>
+        <div class="nav">
+            <div id="logo">
+                <img src="images\WikiWho_Logo.svg" alt="WikiWho" style="width: 60%" >
+            </div>
+            <div id="logout">
+                <button type="button" id="logoutButton" class="button" onclick="doLogout()">Log Out &nbsp;<i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </div>
+        <div id="contactDiv">
+            <div class="header">
+                <h1 class="banner">Contacts</h1>
+                <div class="search">
+                    <input type="text" id="searchBar" placeholder="Search" class="input"/>
+                    <button type="button" id="searchButton" class="button"><i class="fas fa-search"></i></button>
+                </div>
+                <button type="button" id="addButton" class="add-button" onclick="showAddModal()" title="Add Contact" class="button"><i class="fas fa-user-plus"></i></button>
+            </div>
+            <span id="searchResult" class="error"></span>   
+            <table id="table">
+                <thead>
+                    <th style="width: 20%">Contact Name</th>
+                    <th style="width: 40%">Email</th>
+                    <th style="width: 20%">Phone #</th>
+                    <th style="width: 10%"></th>
+                    <th style="width: 10%"></th>
+                </thead>
+                <tbody>
+                    <tr id="contact1">
+                        <td>Charles Moore </td>
+                        <td>Charleymoore2016@gmail.com</td>
+                        <td>3866248734</td>
+                        <td><button type="button" id="button" class="button" onclick="showEditModal(1)" title="Edit Contact"><i class="fas fa-pencil-alt"></i>&nbsp;Edit </button></td>
+                        <td><button type="button" id="button" class="button" onclick="showDeleteModal(1)" title="Delete Contact"><i class="far fa-trash-alt"></i>&nbsp;Delete </button></td>
+                    </tr>
+                    <tr>
+                        <td>Charles Moore </td>
+                        <td>Charleymoore2016@gmail.com</td>
+                        <td>3866248734</td>
+                        <td><button type="button" id="button" class="button" onclick="" title="Edit Contact"><i class="fas fa-pencil-alt"></i>&nbsp;Edit </button></td>
+                        <td><button type="button" id="button" class="button" onclick="" title="Delete Contact"><i class="far fa-trash-alt"></i>&nbsp;Delete </button></td>
+                    </tr>
+                    <tr>
+                        <td>Charles Moore </td>
+                        <td>Charleymoore2016@gmail.com</td>
+                        <td>3866248734</td>
+                        <td><button type="button" id="button" class="button" onclick="" title="Edit Contact"><i class="fas fa-pencil-alt"></i>&nbsp;Edit </button></td>
+                        <td><button type="button" id="button" class="button" onclick="" title="Delete Contact"><i class="far fa-trash-alt"></i>&nbsp;Delete </button></td>
+                    </tr>
+                </tbody>
+              </table> 
+        </div>
+        <div id="add-modal" class="modal-container">
+            <div class="modal-content">
+                <button type="button" class="close-button" onclick="hideAddModal()"><i class="fas fa-times"></i></button>
+                <div class="modal-header">
+                    <h1 class="modal-text">Add Contact</h1>
+                </div>
+                <div id="add-modal-fields">
+                    <hr />
+                    <span id="addContactResult" class="error"></span>
+                    <input type="text" id="addFirstName" placeholder="First Name" class="modal-input"/>
+                    <input type="text" id="addLastName" placeholder="Last Name" class="modal-input"/>
+                    <input type="email" id="addEmail" placeholder="Email" class="modal-input"/>
+                    <input type="tel" id="addPhone" placeholder="Phone" class="modal-input"/>
+                </div>
+                <div id="add-modal-button">
+                    <button id="addModalButton" type="button" class="modal-button" onclick="">Add</button>
+                </div>
+            </div>
+        </div>
+        <div id="delete-modal" class="modal-container">
+            <div class="modal-content"> 
+                <button type="button" class="close-button" onclick="hideDeleteModal()"><i class="fas fa-times"></i></button>
+                <div class="modal-header">
+                    <h1 class="modal-text">Delete this Contact?</h1>
+                </div>
+                <hr />
+                <span id="deleteContactResult" class="error"></span>
+                <span id="deleteContactInfo"></span>
+                <div class="modal-button-container">
+                    <button id="deleteConfirm" type="button" class="modal-button" onclick="">Delete</button>
+                    <button type="button" class="modal-button" onclick="hideDeleteModal()">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div id="edit-modal" class="modal-container">
+            <div class="modal-content">
+                <button type="button" class="close-button" onclick="hideEditModal()"><i class="fas fa-times"></i></button>
+                <div class="modal-header">
+                    <h1 class="modal-text">Edit Contact</h1>
+                </div>
+                <div class="edit-modal-fields">
+                    <hr />
+                    <span id="editContactResult" class="error"></span>
+                    <input type="text" id="editFirstName" placeholder="First Name" class="modal-input"/>
+                    <input type="text" id="editLastName" placeholder="Last Name" class="modal-input"/>
+                    <input type="email" id="editEmail" placeholder="Email" class="modal-input"/>
+                    <input type="tel" id="editPhone" placeholder="Phone" class="modal-input"/>
+                </div>
+                <div class="add-button-container">
+                    <button id="saveEditButton" type="button" class="modal-button" onclick="">Save</button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
