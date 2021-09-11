@@ -28,7 +28,7 @@
                 </div>
                 <button type="button" id="addButton" class="add-button" onclick="showAddModal()" title="Add Contact" class="button"><i class="fas fa-user-plus"></i></button>
             </div>
-            
+            <span id="searchResult" class="error"></span>   
             <table id="table">
                 <thead>
                     <th style="width: 20%">Contact Name</th>
@@ -88,6 +88,7 @@
                     <h1 class="modal-text">Delete this Contact?</h1>
                 </div>
                 <hr />
+                <span id="deleteContactResult" class="error"></span>
                 <span id="deleteContactInfo"></span>
                 <div class="modal-button-container">
                     <button id="deleteConfirm" type="button" class="modal-button" onclick="">Delete</button>

@@ -1,3 +1,6 @@
+var urlBase = 'http://group1-cop4331.ddns.net/LAMPAPI';
+var extension = 'php';
+
 // READ COOKIE
 // readCookie();
 
@@ -6,7 +9,41 @@ function doSearch() {
     var searchBar = document.getElementById("searchBar");
     var searchTerm = searchBar.value;
 
-    // TODO: spicy code goes here
+    var jsonPayload = JSON.stringify({ "userid": userId, "searchterm": searchTerm });
+    var url = urlBase + '/search.' + extension;
+
+    // make HTTP request
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+
+    // send json
+    try {
+        // wait for response
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+
+                // parse response
+                var jsonObject = JSON.parse(xhr.responseText);
+
+                if (jsonObject.status == "error") {
+                    document.getElementById("searchResult").innerHTML = jsonObject.error;
+                    return;
+                }
+
+                // put data in HTML
+                var arr = jsonObject.results;
+                arr.forEach(element => {
+                    addContactToTable(element.firstname, element.lastname, element.phonenumber, element.email);
+                });
+            }
+        };
+        xhr.send(jsonPayload); // send json
+    }
+    catch (err) {
+        document.getElementById("searchResult").innerHTML = err.message;
+    }
+
 }
 
 // adds contact to html table
@@ -37,7 +74,7 @@ function addContactToTable(firstname, lastname, phonenumber, email, contactId) {
     editButton.innerHTML = '<i class="fas fa-pencil-alt"></i>&nbsp;Edit';
     editButton.classList.add("button");
     editButton.title = "Edit Contact";
-    editButton.onclick = function() { showEditModal(contactId); }
+    editButton.onclick = function () { showEditModal(contactId); }
     editButtonTD.appendChild(editButton);
     row.appendChild(editButtonTD);
 
@@ -47,7 +84,7 @@ function addContactToTable(firstname, lastname, phonenumber, email, contactId) {
     deleteButton.innerHTML = '<i class="far fa-trash-alt"></i>&nbsp;Delete';
     deleteButton.classList.add("button");
     deleteButton.title = "Delete Contact";
-    deleteButton.onclick = function() { showDeleteModal(contactId); }
+    deleteButton.onclick = function () { showDeleteModal(contactId); }
     deleteButtonTD.appendChild(deleteButton);
     row.appendChild(deleteButtonTD);
 
@@ -56,14 +93,44 @@ function addContactToTable(firstname, lastname, phonenumber, email, contactId) {
 }
 
 function deleteContact(contactId) {
-    // delete from row
-    var tableBody = document.querySelector("#table tbody");
-    var row = document.getElementById(`contact${contactId}`);
-    tableBody.removeChild(row);
 
-    // TODO: API CALL delete from DB
+    // start API CALL delete from DB
+    var jsonPayload = JSON.stringify({ "id": contactId });
+    var url = urlBase + '/deleteContact.' + extension;
 
-    hideDeleteModal();
+    // make HTTP request
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+
+    // send json
+    try {
+        // wait for response
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+
+                // parse response
+                var jsonObject = JSON.parse(xhr.responseText);
+
+                if (jsonObject.status == "error") {
+                    document.getElementById("deleteContactResult").innerHTML = jsonObject.error;
+                    return;
+                }
+
+                // delete from row
+                var tableBody = document.querySelector("#table tbody");
+                var row = document.getElementById(`contact${contactId}`);
+                tableBody.removeChild(row);
+
+                // close modal
+                hideDeleteModal();
+            }
+        };
+        xhr.send(jsonPayload); // send json
+    }
+    catch (err) {
+        document.getElementById("deleteContactResult").innerHTML = err.message;
+    }
 }
 
 function addContact() {
@@ -73,15 +140,15 @@ function addContact() {
     var phone = document.getElementById("addPhone").value;
 
     if (undefinedOrEmpty(firstname) || undefinedOrEmpty(lastname) || undefinedOrEmpty(email) || undefinedOrEmpty(phone)) {
-        
+
         // add error text
         document.getElementById("addContactResult").innerHTML = "Missing or empty field";
 
         // add error state to each text box that needs it
-        if (undefinedOrEmpty(firstName)) {
+        if (undefinedOrEmpty(firstname)) {
             document.getElementById("addFirstName").classList.add('error');
         }
-        if (undefinedOrEmpty(lastName)) {
+        if (undefinedOrEmpty(lastname)) {
             document.getElementById("addLastName").classList.add('error');
         }
         if (undefinedOrEmpty(email)) {
@@ -94,11 +161,41 @@ function addContact() {
         return;
     }
 
-    addContactToTable(firstname, lastname, phone, email, 5);
 
-    // TODO: API CALL
+    var jsonPayload = JSON.stringify({ "firstname": firstname, "lastname": lastname, "phonenumber": phone, "email": email, "userid": userId });
+    var url = urlBase + '/insertContact.' + extension;
 
-    hideAddModal();
+    // make HTTP request
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+
+    // send json
+    try {
+        // wait for response
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+
+                // parse response
+                var jsonObject = JSON.parse(xhr.responseText);
+
+                if (jsonObject.status == "error") {
+                    document.getElementById("addContactResult").innerHTML = jsonObject.error;
+                    return;
+                }
+
+                // put data in HTML
+                addContactToTable(firstname, lastname, phone, email, 5);
+
+                // close modal
+                hideAddModal();
+            }
+        };
+        xhr.send(jsonPayload); // send json
+    }
+    catch (err) {
+        document.getElementById("addContactResult").innerHTML = err.message;
+    }
 }
 
 function undefinedOrEmpty(str) {
@@ -117,10 +214,10 @@ function updateContact(contactId) {
         document.getElementById("editContactResult").innerHTML = "Missing or empty field";
 
         // add error state to each text box that needs it
-        if (undefinedOrEmpty(firstName)) {
+        if (undefinedOrEmpty(firstname)) {
             document.getElementById("editFirstName").classList.add('error');
         }
-        if (undefinedOrEmpty(lastName)) {
+        if (undefinedOrEmpty(lastname)) {
             document.getElementById("editLastName").classList.add('error');
         }
         if (undefinedOrEmpty(email)) {
@@ -133,13 +230,44 @@ function updateContact(contactId) {
         return;
     }
 
-    document.querySelector(`#contact${contactId} :nth-child(1)`).innerHTML = firstname + " " + lastname;
-    document.querySelector(`#contact${contactId} :nth-child(2)`).innerHTML = email;
-    document.querySelector(`#contact${contactId} :nth-child(3)`).innerHTML = phone;
+    // API CALL to update edited contact
+    var jsonPayload = JSON.stringify({ "firstname": firstname, "lastname": lastname, "phonenumber": phone, "email": email, "id": contactId });
+    var url = urlBase + '/updateContact.' + extension;
 
-    // TODO: API CALL
+    // make HTTP request
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
 
-    hideEditModal();
+    // send json
+    try {
+        // wait for response
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+
+                // parse response
+                var jsonObject = JSON.parse(xhr.responseText);
+
+                if (jsonObject.status == "error") {
+                    document.getElementById("editContactResult").innerHTML = jsonObject.error;
+                    return;
+                }
+
+                // put data in HTML
+                document.querySelector(`#contact${contactId} :nth-child(1)`).innerHTML = firstname + " " + lastname;
+                document.querySelector(`#contact${contactId} :nth-child(2)`).innerHTML = email;
+                document.querySelector(`#contact${contactId} :nth-child(3)`).innerHTML = phone;
+
+                // close modal
+                hideEditModal();
+            }
+        };
+        xhr.send(jsonPayload); // send json
+    }
+    catch (err) {
+        document.getElementById("editContactResult").innerHTML = err.message;
+    }
+
 }
 
 // shows add modal on click

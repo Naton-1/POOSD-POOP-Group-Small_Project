@@ -323,3 +323,25 @@ hr {
     font-family: 'Segoe UI', Frutiger-serif;
     padding-bottom: 2%;
 }
+
+#searchResult {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Frutiger-serif;
+    color: #ff0008;
+}
+
+#deleteContactResult {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Frutiger-serif;
+    color: #ff0008;
+}
