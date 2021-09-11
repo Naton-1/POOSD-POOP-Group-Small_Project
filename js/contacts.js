@@ -1,9 +1,6 @@
 var urlBase = 'http://group1-cop4331.ddns.net/LAMPAPI';
 var extension = 'php';
 
-// READ COOKIE
-// readCookie();
-
 // search for term entered in search field
 function doSearch() {
     var searchBar = document.getElementById("searchBar");
