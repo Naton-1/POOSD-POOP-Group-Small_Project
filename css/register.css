@@ -4,7 +4,7 @@ body {
 }
 
 hr {
-    width: 70%;
+    width: 30%;
     background-color: #6af565;
     border-color: #6af565;
 }
@@ -12,12 +12,12 @@ hr {
 #banner {
     font-size: 27px;
     width: 100%;
-    /*margin: 2% 5%;*/
-    margin-top: 2%;
-    margin-bottom: 5%;
+    margin-top: 0%;
+    margin-bottom: 2%;
     text-align: center;
     font-family: 'Segoe UI', Frutiger-serif;
     color: #6af565;
+    font-size: 40px;
 }
 
 #loginLink {
@@ -58,20 +58,19 @@ hr {
 }
 
 .buttons {
-    border-color: black;
+    border-color: transparent;
+    color: #000000;
     font-size: 24px;
-    /*border-radius: 25px;*/
-    width: 20%;
-    background-color:#FFFFFF;
-    /* margin-left: 20%; */
+    width: 12%;
+    background-color: #6af565;
     display:inline-block;
     font-family: 'Segoe UI', Frutiger-serif;
     border-radius: 15px;
 }
 
 .buttons:hover {
-    background-color: #6af565;
-    color: #000000;
+    background-color: #000000 ;
+    color: #6af565;
     opacity: 100%;
     text-decoration: underline;
     cursor: pointer;
