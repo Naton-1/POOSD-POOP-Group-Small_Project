@@ -24,7 +24,7 @@ function doSearch() {
                 var jsonObject = JSON.parse(xhr.responseText);
 
                 if (jsonObject.status == "error") {
-                    document.getElementById("searchResult").innerHTML = jsonObject.error;
+                    document.getElementById("searchResult").innerHTML = jsonObject.message;
                     return;
                 }
 
@@ -114,7 +114,7 @@ function deleteContact(contactId) {
                 var jsonObject = JSON.parse(xhr.responseText);
 
                 if (jsonObject.status == "error") {
-                    document.getElementById("deleteContactResult").innerHTML = jsonObject.error;
+                    document.getElementById("deleteContactResult").innerHTML = jsonObject.message;
                     return;
                 }
 
@@ -181,7 +181,7 @@ function addContact() {
                 var jsonObject = JSON.parse(xhr.responseText);
 
                 if (jsonObject.status == "error") {
-                    document.getElementById("addContactResult").innerHTML = jsonObject.error;
+                    document.getElementById("addContactResult").innerHTML = jsonObject.message;
                     return;
                 }
 
@@ -250,7 +250,7 @@ function updateContact(contactId) {
                 var jsonObject = JSON.parse(xhr.responseText);
 
                 if (jsonObject.status == "error") {
-                    document.getElementById("editContactResult").innerHTML = jsonObject.error;
+                    document.getElementById("editContactResult").innerHTML = jsonObject.message;
                     return;
                 }
 
