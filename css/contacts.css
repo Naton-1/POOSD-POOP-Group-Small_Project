@@ -1,5 +1,5 @@
 body  {
-    background-color: #111111;
+    background: repeating-linear-gradient(45deg, #0c0c0c,#111111 144px);
     margin: 0px;
     font-family: 'Segoe UI', Frutiger-serif;
 }

@@ -1,6 +1,10 @@
 body {
-    background-color: #111111;
+    background: repeating-linear-gradient(45deg, #0c0c0c,#111111 144px);
     margin: 0;
+    display: inline-block;
+	width: 100%;
+	vertical-align: middle; 
+	overflow: hidden; 
 }
 
 hr {
@@ -55,6 +59,8 @@ hr {
     border-radius: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
+    border-radius: 15px;
+    box-shadow:0 0 5px 5px #6af565;
 }
 
 .buttons {
@@ -91,6 +97,11 @@ input[type="text"],input[type="password"],input[type="email"] {
     font-size: 24px;
 }
 
+.input:focus {
+    border-color: #6af565;
+    box-shadow: 0 0 6px 6px #6af565;
+}
+
 .error {
     border-color: red;
     position: relative;
@@ -108,4 +119,46 @@ input[type="text"],input[type="password"],input[type="email"] {
     margin-bottom: 1%;
     font-family: 'Segoe UI', Frutiger-serif;
     color: #ff0008;
+}
+
+#home {
+    clip-path: url(#cache);
+}
+  
+#line {
+    fill: none;
+    opacity: .55;
+    stroke: #6af565;
+    stroke-width: 6;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 800;
+    animation: draw 15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+  
+@keyframes show {
+    0% {
+      opacity: 0.15;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0.15;
+    }
+}
+.svg-content {
+    display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
