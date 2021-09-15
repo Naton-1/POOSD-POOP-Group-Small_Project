@@ -18,7 +18,7 @@
 			<h1 id="banner">The best tool for keeping up with friends</h1>
 			<span id="loginResult"></span>
 			<input type="text" id="loginName" placeholder="Email" class="input"/>
-			<input type="password" id="loginPassword" placeholder="Password" class="input"/>
+			<input type="password" id="loginPassword" placeholder="Password" class="input" onkeydown="loginKeyDown();"/>
 			<button type="button" id="loginButton" class="buttons" onclick="doLogin();"> Sign In </button>
 			<a href="/register.html" id="registerLink" > Don't have an account? Register Here!</a>
 		</div>

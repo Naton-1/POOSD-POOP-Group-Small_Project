@@ -75,3 +75,10 @@ function checkLogin(email, password) {
         return 0;
     }
 }
+
+// login when enter key hit
+function loginKeyDown(e) {
+    if (e.keyCode == 13) {
+        doLogin();
+    }
+}
