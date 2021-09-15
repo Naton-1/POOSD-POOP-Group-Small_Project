@@ -46,4 +46,4 @@ function doLogout() {
     window.location.href = "index.html";
 }
 
-readCookie();
+// readCookie();

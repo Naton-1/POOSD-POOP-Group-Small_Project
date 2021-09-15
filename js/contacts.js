@@ -83,7 +83,7 @@ function addContactToTable(firstname, lastname, phonenumber, email, contactId) {
     var deleteButtonTD = document.createElement("td");
     var deleteButton = document.createElement("button");
     deleteButton.innerHTML = '<i class="far fa-trash-alt"></i>&nbsp;Delete';
-    deleteButton.classList.add("button");
+    deleteButton.classList.add("delete-button");
     deleteButton.title = "Delete Contact";
     deleteButton.onclick = function () { showDeleteModal(contactId); }
     deleteButtonTD.appendChild(deleteButton);

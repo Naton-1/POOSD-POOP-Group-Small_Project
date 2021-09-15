@@ -142,6 +142,30 @@ hr {
     margin-bottom: 20px;
 }
 
+.delete-button {
+    font-size: 15px;
+    color: #FFFFFF;
+    background-color:#ff0008;
+    position: relative;
+    width: 80%;
+    display: inline-block;
+    border-radius: 15px;
+    border-color: transparent;
+    padding: 5px 0px;
+}
+
+.delete-button:hover {
+    font-size: 15px;
+    color: #000000;
+    background-color:#ff0008;
+    position: relative;
+    width: 80%;
+    display: inline-block;
+    border-radius: 15px;
+    border-color: transparent;
+    padding: 5px 0px;
+}
+
 .button {
     font-size: 15px;
     color: #000000;
