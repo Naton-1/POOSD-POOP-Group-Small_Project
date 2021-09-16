@@ -23,7 +23,7 @@
             <div class="header">
                 <h1 class="banner">Contacts</h1>
                 <div class="search">
-                    <input type="text" id="searchBar" placeholder="Search" class="input"/>
+                    <input type="text" id="searchBar" placeholder="Search" class="input" />
                     <button type="button" id="searchButton" class="button" onclick="doSearch()"><i class="fas fa-search"></i></button>
                 </div>
                 <button type="button" id="addButton" class="add-button" onclick="showAddModal()" title="Add Contact" class="button"><i class="fas fa-user-plus"></i></button>
@@ -52,7 +52,7 @@
                     <span id="addContactResult" class="error"></span>
                     <input type="text" id="addFirstName" placeholder="First Name" class="modal-input"/>
                     <input type="text" id="addLastName" placeholder="Last Name" class="modal-input"/>
-                    <input type="email" id="addEmail" placeholder="Email" class="modal-input"/>
+                    <input type="email" id="addEmail" placeholder="Email" class="modal-input" maxlength="5"/>
                     <input type="tel" id="addPhone" placeholder="Phone" class="modal-input"/>
                 </div>
                 <div id="add-modal-button">
@@ -86,8 +86,8 @@
                     <span id="editContactResult" class="error"></span>
                     <input type="text" id="editFirstName" placeholder="First Name" class="modal-input"/>
                     <input type="text" id="editLastName" placeholder="Last Name" class="modal-input"/>
-                    <input type="email" id="editEmail" placeholder="Email" class="modal-input"/>
-                    <input type="tel" id="editPhone" placeholder="Phone" class="modal-input"/>
+                    <input type="email" id="editEmail" placeholder="Email" class="modal-input" maxlength="2"/>
+                    <input type="tel" id="editPhone" placeholder="Phone" class="modal-input" maxlength="2"/>
                 </div>
                 <div class="add-button-container">
                     <button id="saveEditButton" type="button" class="modal-button" onclick="">Save</button>
