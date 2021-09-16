@@ -140,8 +140,13 @@ function addContact() {
     var email = document.getElementById("addEmail").value;
     var phone = document.getElementById("addPhone").value;
 
+    // clear error display
+    document.getElementById("addFirstName").classList.remove('error');
+    document.getElementById("addLastName").classList.remove('error');
+    document.getElementById("addEmail").classList.remove('error');
+    document.getElementById("addPhone").classList.remove('error');
+    
     if (undefinedOrEmpty(firstname) || undefinedOrEmpty(lastname) || undefinedOrEmpty(email) || undefinedOrEmpty(phone)) {
-
         // add error text
         document.getElementById("addContactResult").innerHTML = "Missing or empty field";
 
@@ -156,6 +161,27 @@ function addContact() {
             document.getElementById("addEmail").classList.add('error');
         }
         if (undefinedOrEmpty(phone)) {
+            document.getElementById("addPhone").classList.add('error');
+        }
+
+        return;
+    }
+    else if (hasWhitespace(firstname) || hasWhitespace(lastname) || hasWhitespace(email) || hasWhitespace(phone)) {
+
+        // add error text
+        document.getElementById("addContactResult").innerHTML = "No spaces allowed. Please try again.";
+
+        // add error state to each text box that needs it
+        if (hasWhitespace(firstname)) {
+            document.getElementById("addFirstName").classList.add('error');
+        }
+        if (hasWhitespace(lastname)) {
+            document.getElementById("addLastName").classList.add('error');
+        }
+        if (hasWhitespace(email)) {
+            document.getElementById("addEmail").classList.add('error');
+        }
+        if (hasWhitespace(phone)) {
             document.getElementById("addPhone").classList.add('error');
         }
 
@@ -203,17 +229,26 @@ function undefinedOrEmpty(str) {
     return str == undefined || str == "";
 }
 
+function hasWhitespace(str) {
+    return /\s/g.test(str);
+}
+
 function updateContact(contactId) {
     var firstname = document.getElementById("editFirstName").value;
     var lastname = document.getElementById("editLastName").value;
     var email = document.getElementById("editEmail").value;
     var phone = document.getElementById("editPhone").value;
 
+    // clear error display
+    document.getElementById("editFirstName").classList.remove('error');
+    document.getElementById("editLastName").classList.remove('error');
+    document.getElementById("editEmail").classList.remove('error');
+    document.getElementById("editPhone").classList.remove('error');
+
     if (undefinedOrEmpty(firstname) || undefinedOrEmpty(lastname) || undefinedOrEmpty(email) || undefinedOrEmpty(phone)) {
 
         // add error text
         document.getElementById("editContactResult").innerHTML = "Missing or empty field";
-
         // add error state to each text box that needs it
         if (undefinedOrEmpty(firstname)) {
             document.getElementById("editFirstName").classList.add('error');
@@ -225,6 +260,27 @@ function updateContact(contactId) {
             document.getElementById("editEmail").classList.add('error');
         }
         if (undefinedOrEmpty(phone)) {
+            document.getElementById("editPhone").classList.add('error');
+        }
+
+        return;
+    }
+    else if (hasWhitespace(firstname) || hasWhitespace(lastname) || hasWhitespace(email) || hasWhitespace(phone)) {
+
+        // add error text
+        document.getElementById("editContactResult").innerHTML = "No spaces allowed. Please try again.";
+
+        // add error state to each text box that needs it
+        if (hasWhitespace(firstname)) {
+            document.getElementById("editFirstName").classList.add('error');
+        }
+        if (hasWhitespace(lastname)) {
+            document.getElementById("editLastName").classList.add('error');
+        }
+        if (hasWhitespace(email)) {
+            document.getElementById("editEmail").classList.add('error');
+        }
+        if (hasWhitespace(phone)) {
             document.getElementById("editPhone").classList.add('error');
         }
 
