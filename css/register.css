@@ -66,8 +66,8 @@ hr {
 .buttons {
     border-color: transparent;
     color: #000000;
-    font-size: 24px;
-    width: 12%;
+    font-size: .8em;
+    width: 5em;
     background-color: #6af565;
     display:inline-block;
     font-family: 'Segoe UI', Frutiger-serif;
