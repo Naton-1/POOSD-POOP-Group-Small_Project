@@ -85,6 +85,26 @@ function checkRegister(firstName, lastName, email, password, confirmPassword) {
 
         return 1;
     }
+    else if (hasWhitespace(firstName) || hasWhitespace(lastName) || hasWhitespace(email) || hasWhitespace(password) || hasWhitespace(confirmPassword)) {
+        document.getElementById("registerResult").innerHTML = "No spaces allowed. Please try again.";
+        if (hasWhitespace(firstName)) {
+            document.getElementById("registerFirstName").classList.add('error');
+        }
+        if (hasWhitespace(lastName)) {
+            document.getElementById("registerLastName").classList.add('error');
+        }
+        if (hasWhitespace(email)) {
+            document.getElementById("registerEmail").classList.add('error');
+        }
+        if (hasWhitespace(password)) {
+            document.getElementById("registerPassword").classList.add('error');
+        }
+        if (hasWhitespace(confirmPassword)) {
+            document.getElementById("confirmPassword").classList.add('error');
+        }
+
+        return 1;
+    }
     else {
         document.getElementById("registerFirstName").classList.remove('error');
         document.getElementById("registerLastName").classList.remove('error');
@@ -101,12 +121,14 @@ function checkRegister(firstName, lastName, email, password, confirmPassword) {
             return 1;
         }
 
-       
-        
         return 0;
     }
 }
 
 function undefinedOrEmpty(str) {
     return str == undefined || str == "";
+}
+
+function hasWhitespace(str) {
+    return /\s/g.test(str);
 }
