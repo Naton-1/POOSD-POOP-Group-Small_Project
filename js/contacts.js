@@ -3,6 +3,8 @@ var extension = 'php';
 
 // search for term entered in search field
 function doSearch() {
+    document.getElementById("searchResult").innerHTML = "";
+    document.getElementById("searchResult").classList.remove("error");
     var searchBar = document.getElementById("searchBar");
     var searchTerm = searchBar.value;
 
